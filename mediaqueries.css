@@ -12,12 +12,6 @@
 }
 
 @media screen and (max-width: 1200px) {
-  #desktop-nav {
-    display: none;
-  }
-  #hamburger-nav {
-    display: flex;
-  }
   #profile,
   .section-container {
     display: block;
@@ -46,6 +40,12 @@
 }
 
 @media screen and (max-width: 600px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
   #contact,
   footer {
     height: 40vh;
