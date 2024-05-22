@@ -171,33 +171,28 @@ a:hover {
 }
 
 .project-slider {
-  position: relative;
+  display: flex;
+  grid-template-columns: repeat(5, 5fr);
+  padding-bottom: 2.5rem;
 }
 
 .project-list {
   display: flex;
   justify-content: left;
   padding-top: 4rem;
-}
-
-.project-slider .project-list {
-  display: grid;
-  grid-template-columns: repeat(5, 5fr);
   gap: 2rem;
   overflow-x: auto;
   scrollbar-width: none;
-  padding-bottom: 2.5rem;
+  scroll-behavior: smooth;
 }
 
 #first-project {
   padding-left: 5vh;
 }
 
-/* .slider-wrapper .image-list .project-details-container {
-  width: 325px;
-  height: 400px;
-  object-fit: cover;
-} */
+#last-project {
+  padding-right: 5vh;
+}
 
 .project-details-container {
   height: auto;
@@ -231,6 +226,63 @@ a:hover {
   padding-left: 2px;
 }
 
+.slide-btn {
+  margin-top: 4rem;
+  position: absolute;
+  /* top: 29%; */
+  /* transform: translate(-50%, -50%); */
+  /* You can adjust the positioning and styling as needed */
+  
+  border: none;
+  border-radius: 0.5rem;
+  /* flex-grow: 0;
+  flex-shrink: 0; */
+  background-color: rgba(126, 126, 126, 0.107);
+  z-index: 10;
+  /* margin: var(--img-gap) 0;
+  width: var(--handle-size); */
+  cursor: pointer;
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  /* transition: background-color 150ms ease-in-out; */
+  width: 50px;
+  height: 423px;
+  transition: background-color 100ms ease-in-out, opacity 100ms ease-in-out;
+  opacity: 1;
+}
+
+/* .slide-btn:hover {
+  
+} */
+
+.prev-btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  left: 0;
+  background: linear-gradient(to right, rgba(30, 30, 30, 0.6), rgba(0, 0, 0, 0));
+}
+
+.prev-btn:hover {
+  background: linear-gradient(to right, rgba(10, 10, 10, 0.65), rgba(0, 0, 0, 0));
+}
+
+.next-btn {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  right: 0;
+  background: linear-gradient(to left, rgba(30, 30, 30, 0.6), rgba(0, 0, 0, 0));
+}
+
+.next-btn:hover {
+  background: linear-gradient(to left, rgba(40, 40, 40, 0.8), rgba(0, 0, 0, 0));
+}
+
+.text {
+  transition: transform 150ms ease-in-out;
+}
 
 /* ABOUT SECTION */
 

@@ -60,76 +60,100 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
-const initSlider = () => {
-  const imageList = document.querySelector(".project-slider .project-list");
-  const slideButtons = document.querySelectorAll(
-    ".project-slider .slide-button"
-  );
-  const sliderScrollbar = document.querySelector(
-    ".container .slider-scrollbar"
-  );
-  const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
-  const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+// Projects Left/Right Scroll Putton
+document.addEventListener("click", (e) => {
+  let slideBtn;
+  if (e.target.matches(".slide-btn")) {
+    slideBtn = e.target;
+  } else {
+    slideBtn = e.target.closest(".slide-btn");
+  }
+  if (slideBtn != null) onHandleClick(slideBtn);
+});
 
-  // Handle scrollbar thumb drag
-  scrollbarThumb.addEventListener("mousedown", (e) => {
-    const startX = e.clientX;
-    const thumbPosition = scrollbarThumb.offsetLeft;
-    const maxThumbPosition =
-      sliderScrollbar.getBoundingClientRect().width -
-      scrollbarThumb.offsetWidth;
+function onHandleClick(handle) {
+  const slider = handle
+    .closest(".project-slider")
+    .querySelector(".project-list");
+  const scrollAmount = 500; // Number of pixels to scroll
 
-    // Update thumb position on mouse move
-    const handleMouseMove = (e) => {
-      const deltaX = e.clientX - startX;
-      const newThumbPosition = thumbPosition + deltaX;
-      // Ensure the scrollbar thumb stays within bounds
-      const boundedPosition = Math.max(
-        0,
-        Math.min(maxThumbPosition, newThumbPosition)
-      );
-      const scrollPosition =
-        (boundedPosition / maxThumbPosition) * maxScrollLeft;
+  if (handle.classList.contains("prev-btn")) {
+    slider.scrollBy({
+      top: 0,
+      left: -scrollAmount,
+      behavior: "smooth",
+    });
+  }
 
-      scrollbarThumb.style.left = `${boundedPosition}px`;
-      imageList.scrollLeft = scrollPosition;
-    };
-    // Remove event listeners on mouse up
-    const handleMouseUp = () => {
-      document.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("mouseup", handleMouseUp);
-    };
-    // Add event listeners for drag interaction
-    document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseup", handleMouseUp);
-  });
-  // // Slide images according to the slide button clicks
-  // slideButtons.forEach((button) => {
-  //   button.addEventListener("click", () => {
-  //     const direction = button.id === "prev-slide" ? -1 : 1;
-  //     const scrollAmount = imageList.clientWidth * direction;
-  //     imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
-  //   });
-  // });
-  // // Show or hide slide buttons based on scroll position
-  // const handleSlideButtons = () => {
-  //   slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
-  //   slideButtons[1].style.display =
-  //     imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
-  // };
-  // Update scrollbar thumb position based on image scroll
-  const updateScrollThumbPosition = () => {
-    const scrollPosition = imageList.scrollLeft;
-    const thumbPosition =
-      (scrollPosition / maxScrollLeft) *
-      (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
-    scrollbarThumb.style.left = `${thumbPosition}px`;
-  };
-  // Call these two functions when image list scrolls
-  imageList.addEventListener("scroll", () => {
-    updateScrollThumbPosition();
-    // handleSlideButtons();
-  });
-};
-window.addEventListener("resize", initSlider);
-window.addEventListener("load", initSlider);
+  if (handle.classList.contains("next-btn")) {
+    slider.scrollBy({
+      top: 0,
+      left: scrollAmount,
+      behavior: "smooth",
+    });
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const projectList = document.querySelector(".project-list");
+  const prevBtn = document.querySelector(".prev-btn");
+  const nextBtn = document.querySelector(".next-btn");
+  const firstProject = document.getElementById("first-project");
+  const lastProject = document.getElementById("last-project");
+
+  function checkScrollPosition() {
+    const maxScrollLeft = projectList.scrollWidth - projectList.clientWidth;
+    const firstProjectMarginLeft = parseFloat(
+      getComputedStyle(firstProject).paddingLeft
+    );
+    const lastProjectMarginRight = parseFloat(
+      getComputedStyle(lastProject).paddingRight
+    );
+
+    if (projectList.scrollLeft <= firstProjectMarginLeft) {
+      prevBtn.style.opacity = "0";
+      prevBtn.style.pointerEvents = "none";
+    } else {
+      prevBtn.style.opacity = "1";
+      prevBtn.style.pointerEvents = "auto";
+    }
+
+    if (projectList.scrollLeft >= maxScrollLeft - lastProjectMarginRight) {
+      nextBtn.style.opacity = "0";
+      nextBtn.style.pointerEvents = "none";
+    } else {
+      nextBtn.style.opacity = "1";
+      nextBtn.style.pointerEvents = "auto";
+    }
+  }
+
+  projectList.addEventListener("scroll", checkScrollPosition);
+
+  // Initial check
+  checkScrollPosition();
+});
+
+// function throttle(cb, delay = 1000) {
+//   let shouldWait = false;
+//   let waitingArgs;
+//   const timeoutFunc = () => {
+//     if (waitingArgs == null) {
+//       shouldWait = false;
+//     } else {
+//       cb(...waitingArgs);
+//       waitingArgs = null;
+//       setTimeout(timeoutFunc, delay);
+//     }
+//   }
+
+//   return (...args) => {
+//     if (shouldWait) {
+//       waitingArgs = args;
+//       return;
+//     }
+
+//     cb(...args);
+//     shouldWait = true;
+//     setTimeout(timeoutFunc, delay);
+//   }
+// }

@@ -1,2 +1,3 @@
 # portfolio-victorouy
- My Portfolio to display my information and projects
+
+A web portfolio to showcase my projects and info about me
