@@ -46,7 +46,8 @@
     font-size: 12px;
   }
   .skill-category {
-    width: 49%; /* Full width for smaller screens */
+    width: 49%;
+    vertical-align: top; 
   }
   .skill-list {
     display: inline;

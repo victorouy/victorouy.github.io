@@ -321,7 +321,7 @@ a:hover {
   border-bottom-width: 0px; 
   border-top-width: 1px; 
   opacity: 1;
-  padding: 5vh 0;
+  padding: 6.5vh 0;
 }
 
 .about-subject {
@@ -335,7 +335,7 @@ a:hover {
 }
 
 .about-details {
-  margin-left: 30%;
+  margin-left: 40%;
   padding-top: 0.1vh;
 }
 
@@ -439,8 +439,8 @@ a:hover {
 }
 
 .skill-header {
-  /* width: 30%; */
-  padding-right: 75px;
+  padding-right: 50px;
+  padding-bottom: 15px;
   height: 100%;
   display: inline-block;
   vertical-align: top; 
@@ -453,84 +453,14 @@ a:hover {
 
 .skill-list {
   width: 25%;
-  /* padding-right: 50px; */
   display: inline-block;
   vertical-align: top; 
 }
 
-/*.skills-list {
-  display: flex;
-  justify-content: left;
+.skill-list p {
+  color: black;
+  line-height: 1.8;
 }
-
-.skill-header {
-  padding-left: 50px;
-  padding-right: 50px;
-}
-
-.skill-header h2 {
-  font-size: 18px;
-  color: rgb(75, 75, 75);
-}
-
-.skill-category {
-  padding-right: 50px;
-}
-
-.skill-category ul {
-  list-style-type: none;
-}
-
-.skill-category li {
-  font-size: 16px;
-  color: rgb(10, 10, 10);
-  margin-bottom: 5px;
-}
-
-.about-details-text {
-  color: rgb(10, 10, 10);
-  font-size: 18px;
-  letter-spacing: 0.25px;
-} */
-
-/* .skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.skill-category {
-  width: 22%;
-}
-
-.skill-category h2 {
-  font-size: 18px;
-  color: rgb(75, 75, 75);
-  margin-bottom: 10px;
-}
-
-.skill-category ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.lower {
-  margin-top: 30px;
-}
-
-.skill-category li {
-  font-size: 16px;
-  color: rgb(10, 10, 10);
-  margin-bottom: 5px;
-}
-*/
-
-.about-details-text {
-  color: rgb(10, 10, 10);
-  font-size: 18px;
-  letter-spacing: 0.25px;
-} 
-
 
 /* ABOUT: RESUME */
 
