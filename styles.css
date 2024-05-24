@@ -126,13 +126,15 @@ a:hover {
   text-align: left;
 }
 
-.profile-description {
+#profile-description {
   text-align: left;
   margin-top: 1rem;
   margin-bottom: 2rem;
   font-size: 21px;
   color: rgb(52, 52, 52);
   font-weight: 400;
+  width: 450px;
+  height: 90px;
 }
 
 .socials-container {
