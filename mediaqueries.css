@@ -12,64 +12,94 @@
 }
 
 @media screen and (max-width: 1200px) {
-  #profile,
-  .section-container {
+  #profile{
     display: block;
-    padding-bottom: 6rem;
+    /* padding-bottom: 6rem; */
   }
   .arrow {
     display: none;
   }
-  section,
-  .section-container {
+  section{
     height: fit-content;
   }
   section {
     /* margin: 0 5%; */
     padding-top: 10rem;
   }
-  .section__pic-container {
+  .profile-pic-container {
     width: 275px;
     height: 275px;
     margin: 0 auto 2rem;
     padding-top: 2rem;
+    justify-content: center;
+  }
+  .profile-text p, .profile-text h1 {
+    text-align: center;
+  }
+  .socials-container {
+    justify-content: center;
   }
   .about-containers {
     margin-top: 0;
   }
+  .content {
+    font-size: 12px;
+  }
+  .skill-category {
+    width: 49%; /* Full width for smaller screens */
+  }
+  .skill-list {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #profile {
+    padding-top: 13vh;
+    padding-bottom: 3vh;
+  }
 }
 
 @media screen and (max-width: 600px) {
-  #desktop-nav {
+  .nav-links {
     display: none;
   }
+
+  /* #desktop-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  } */
+
   #hamburger-nav {
     display: flex;
   }
-  #contact,
+  
+  /* #contact,
   footer {
     height: 40vh;
-  }
+  } */
   #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
+    padding-top: 13vh;
+    padding-bottom: 3vh;
   }
   article {
     font-size: 1rem;
   }
-  footer nav {
+  /* footer nav {
     height: fit-content;
     padding-bottom: 2rem;
-  }
+  } */
   .about-containers,
-  .contact-info-upper-container,
   .btn-container {
     flex-wrap: wrap;
   }
-  .contact-info-container {
-    margin: 0;
+  .contact-info-container a {
+    font-size: 20px;
   }
-  .contact-info-container p,
+  footer a {
+    font-size: 16px;
+  }
   .nav-links li a {
     font-size: 1rem;
   }
@@ -80,13 +110,12 @@
     font-size: 1.5rem;
   }
   .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
+    /* flex-direction: column; */
+    gap: 0.75rem;
     text-align: center;
   }
-  .section__pic-container {
+  .profile-pic-container {
     width: auto;
-    height: 46vw;
     justify-content: center;
   }
   .section__text__p2 {
@@ -98,4 +127,22 @@
   .text-container {
     text-align: justify;
   }
+  .about-subject {
+    float: none;
+    padding-bottom: 1.5vh;
+  }
+  .about-details {
+    margin-left: 0%;
+  }
+  .content {
+    font-size: 10px;
+  }
+  .skill-category {
+    width: 49%; /* Full width for smaller screens */
+  }
+
+  .skill-header h2, .skill-list p {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+  
 }

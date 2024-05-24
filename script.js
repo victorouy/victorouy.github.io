@@ -1,17 +1,19 @@
 // Prevent scrolling on page load
-window.addEventListener("load", function () {
-  window.scrollTo(0, 0);
+// window.addEventListener("load", function () {
+//   window.scrollTo(0, 0);
 
-  if (window.location.hash) {
-    var currentUrl = window.location.href;
-    var cleanUrl = currentUrl.substring(0, currentUrl.indexOf("#"));
-    history.replaceState({}, document.title, cleanUrl);
-  }
-});
+//   if (window.location.hash) {
+//     var currentUrl = window.location.href;
+//     var cleanUrl = currentUrl.substring(0, currentUrl.indexOf("#"));
+//     history.replaceState({}, document.title, cleanUrl);
+//   }
+// });
 
 // Turns the nav links white when the background is dark
 document.addEventListener("DOMContentLoaded", function () {
   const logo = document.querySelectorAll(".logo a");
+  const hamburgerIcon = document.querySelectorAll(".hamburger-icon span");
+  const menuLinks = document.querySelectorAll(".menu-links a");
   const navLinks = document.querySelectorAll(".nav-links a"); // Select all nav links
   const sections = document.querySelectorAll("section"); // Assuming you have sections that determine the background
   const darkSectionIds = ["projects", "contact"]; // IDs of sections with dark backgrounds
@@ -46,21 +48,37 @@ document.addEventListener("DOMContentLoaded", function () {
         link.classList.remove("light-text");
       }
     });
+
+    hamburgerIcon.forEach((link) => {
+      if (isDarkBackground) {
+        link.classList.add("light-icon");
+      } else {
+        link.classList.remove("light-icon");
+      }
+    });
+
+    menuLinks.forEach((link) => {
+      if (isDarkBackground) {
+        link.classList.add("light-text");
+      } else {
+        link.classList.remove("light-text");
+      }
+    });
   }
 
   window.addEventListener("scroll", updateNavLinkColors);
   updateNavLinkColors(); // Initial check on load
 });
 
-// Navigation menu
+// Navigation hamburger menu
 function toggleMenu() {
-  const menu = document.querySelector(".menu-links");
-  const icon = document.querySelector(".hamburger-icon");
-  menu.classList.toggle("open");
-  icon.classList.toggle("open");
+  const hamburgerIcon = document.querySelector(".hamburger-icon");
+  const menuLinks = document.querySelector(".menu-links");
+  hamburgerIcon.classList.toggle("open");
+  menuLinks.classList.toggle("open");
 }
 
-// Projects Left/Right Scroll Putton
+// Functionality for project slider buttons
 document.addEventListener("click", (e) => {
   let slideBtn;
   if (e.target.matches(".slide-btn")) {
@@ -94,6 +112,7 @@ function onHandleClick(handle) {
   }
 }
 
+// Ensures that project slider buttons are visible only when needed
 document.addEventListener("DOMContentLoaded", () => {
   const projectList = document.querySelector(".project-list");
   const prevBtn = document.querySelector(".prev-btn");
@@ -128,32 +147,5 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   projectList.addEventListener("scroll", checkScrollPosition);
-
-  // Initial check
   checkScrollPosition();
 });
-
-// function throttle(cb, delay = 1000) {
-//   let shouldWait = false;
-//   let waitingArgs;
-//   const timeoutFunc = () => {
-//     if (waitingArgs == null) {
-//       shouldWait = false;
-//     } else {
-//       cb(...waitingArgs);
-//       waitingArgs = null;
-//       setTimeout(timeoutFunc, delay);
-//     }
-//   }
-
-//   return (...args) => {
-//     if (shouldWait) {
-//       waitingArgs = args;
-//       return;
-//     }
-
-//     cb(...args);
-//     shouldWait = true;
-//     setTimeout(timeoutFunc, delay);
-//   }
-// }
