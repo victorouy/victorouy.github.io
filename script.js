@@ -1,3 +1,4 @@
+/* Typewriter effect for the profile description */
 document.addEventListener("DOMContentLoaded", () => {
   var i = 0;
   const txt =
@@ -16,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   typeWriter();
 });
 
-// Turns the nav links white when the background is dark
+/* Turns the nav links white when the background is dark */
 document.addEventListener("DOMContentLoaded", function () {
   const logo = document.querySelectorAll(".logo a");
   const hamburgerIcon = document.querySelectorAll(".hamburger-icon span");
@@ -77,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
   updateNavLinkColors(); // Initial check on load
 });
 
-// Navigation hamburger menu
+/* Navigation hamburger menu */
 function toggleMenu() {
   const hamburgerIcon = document.querySelector(".hamburger-icon");
   const menuLinks = document.querySelector(".menu-links");
@@ -85,7 +86,7 @@ function toggleMenu() {
   menuLinks.classList.toggle("open");
 }
 
-// Functionality for project slider buttons
+/* Functionality for project slider buttons */
 document.addEventListener("click", (e) => {
   let slideBtn;
   if (e.target.matches(".slide-btn")) {
@@ -95,7 +96,6 @@ document.addEventListener("click", (e) => {
   }
   if (slideBtn != null) onHandleClick(slideBtn);
 });
-
 function onHandleClick(handle) {
   const slider = handle
     .closest(".project-slider")
@@ -119,7 +119,7 @@ function onHandleClick(handle) {
   }
 }
 
-// Ensures that project slider buttons are visible only when needed
+/* Ensures that project slider frames are visible only when needed */
 document.addEventListener("DOMContentLoaded", () => {
   const projectList = document.querySelector(".project-list");
   const prevBtn = document.querySelector(".prev-btn");
