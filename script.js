@@ -1,14 +1,3 @@
-// Prevent scrolling on page load
-// window.addEventListener("load", function () {
-//   window.scrollTo(0, 0);
-
-//   if (window.location.hash) {
-//     var currentUrl = window.location.href;
-//     var cleanUrl = currentUrl.substring(0, currentUrl.indexOf("#"));
-//     history.replaceState({}, document.title, cleanUrl);
-//   }
-// });
-
 document.addEventListener("DOMContentLoaded", () => {
   var i = 0;
   const txt =
