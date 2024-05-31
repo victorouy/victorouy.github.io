@@ -14,7 +14,6 @@
 @media screen and (max-width: 1200px) {
   #profile{
     display: block;
-    /* padding-bottom: 6rem; */
   }
   .arrow {
     display: none;
@@ -23,7 +22,6 @@
     height: fit-content;
   }
   section {
-    /* margin: 0 5%; */
     padding-top: 10rem;
   }
   #profile {
@@ -68,11 +66,7 @@
     padding-bottom: 3vh;
     height: auto;
   }
-  /* .socials-container {
-    padding-top: 5vh;
-  } */
   #profile-description {
-    /* width: auto; */
     height: auto;
     font-size: 19px;
   }
@@ -141,5 +135,4 @@
   .skill-header h2, .skill-list p {
     font-size: 16px; /* Adjust font size for smaller screens */
   }
-  
 }

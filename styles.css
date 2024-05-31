@@ -100,10 +100,6 @@ a:hover {
   text-align: left;
 }
 
-/* .section-container {
-  display: flex;
-} */
-
 
 /* PROFILE SECTION */
 
@@ -161,11 +157,9 @@ a:hover {
   position: relative;
   padding-top: 10vh;
   padding-bottom: 10vh;
-  /* border-radius: 15px 15px 15px 15px; */
 }
 
 .title-project {
-  /* padding-top: 2.5rem; */
   padding-left: 5vh;
   padding-right: 5vh;
 }
@@ -229,34 +223,21 @@ a:hover {
 .slide-btn {
   margin-top: 4rem;
   position: absolute;
-  /* top: 29%; */
-  /* transform: translate(-50%, -50%); */
-  /* You can adjust the positioning and styling as needed */
-  
   border: none;
   border-radius: 0.5rem;
-  /* flex-grow: 0;
-  flex-shrink: 0; */
   background-color: rgba(126, 126, 126, 0.107);
   z-index: 10;
-  /* margin: var(--img-gap) 0;
-  width: var(--handle-size); */
   cursor: pointer;
   font-size: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  /* transition: background-color 150ms ease-in-out; */
   width: 50px;
   height: 423px;
   transition: background-color 100ms ease-in-out, opacity 100ms ease-in-out;
   opacity: 1;
 }
-
-/* .slide-btn:hover {
-  
-} */
 
 .prev-btn {
   border-top-left-radius: 0;
@@ -283,6 +264,7 @@ a:hover {
 .text {
   transition: transform 150ms ease-in-out;
 }
+
 
 /* ABOUT SECTION */
 
@@ -378,7 +360,6 @@ a:hover {
   border-bottom: 5px solid transparent;
 }
 
-
 .event {
   position: relative;
   text-align: center;
@@ -431,12 +412,10 @@ a:hover {
   transform: scale(1.1);
 }
 
-
 /* ABOUT: SKILLS */
 
 .skill-category {
   width: 49.5%;
-  /* height: 100%; */
   display: inline-block;
 }
 
@@ -478,10 +457,10 @@ a:hover {
 
 .view-resume:hover {
   color: rgb(100, 100, 100);
-  /* text-decoration: none; */
   text-decoration-color: rgb(100, 100, 100);
   cursor: pointer;
 }
+
 
 /* CONTACT */
 
@@ -575,6 +554,7 @@ footer a {
   padding-right: 10vh;
 } 
 
+
 /* ICONS */
 
 .icon {
@@ -663,7 +643,6 @@ footer a {
   position: absolute;
   top: 100%;
   right: 0;
-  /* background-color: white; */
   width: fit-content;
   max-height: 0;
   overflow: hidden;
