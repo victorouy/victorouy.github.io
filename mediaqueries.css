@@ -37,7 +37,7 @@
   .profile-text p, .profile-text h1 {
     text-align: center;
   }
-  #profile-description {
+  .profile-description {
     text-align: center;
     width: 50%;
     padding-left: 25%;
@@ -66,7 +66,7 @@
     padding-bottom: 3vh;
     height: auto;
   }
-  #profile-description {
+  .profile-description {
     height: auto;
     font-size: 19px;
   }
