@@ -3,18 +3,18 @@ document.addEventListener("DOMContentLoaded", () => {
   var i = 0;
   const txt =
     "Montreal-based programmer creating innovative, user-centric digital solutions for dynamic and forward-thinking organizations.";
-  const speed = 50;
+  const speed = 30;
 
   function typeWriter() {
     if (i < txt.length) {
-      document.getElementById("profile-description").innerHTML += txt.charAt(i);
+      document.getElementById("profile-description-text").innerHTML +=
+        txt.charAt(i);
       i++;
       setTimeout(typeWriter, speed);
     }
   }
 
   window.addEventListener("load", typeWriter);
-  typeWriter();
 });
 
 /* Turns the nav links white when the background is dark */
