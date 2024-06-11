@@ -67,7 +67,6 @@
     height: auto;
   }
   .profile-description {
-    height: auto;
     font-size: 19px;
   }
   .nav-links {
@@ -83,9 +82,23 @@
     font-size: 16px;
     padding-bottom: 10px;
   }
+  .profile-description {
+    width: 80%;
+    padding-left: 10%;
+  }
+  .pretitle-profile {
+    font-size: 33px;
+  }
+  .title-profile {
+    font-size: 70px;
+    padding-top: 1.8vh;
+    padding-bottom: 1.8vh;
+  }
   #profile {
     padding-top: 13vh;
     padding-bottom: 3vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
   }
   article {
     font-size: 1rem;
@@ -134,5 +147,21 @@
   }
   .skill-header h2, .skill-list p {
     font-size: 16px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media screen and (max-width: 563px) {
+  .profile-description {
+    height: 125px;
+  }
+  .content {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+}
+
+@media screen and (max-width: 405px) {
+  .profile-description {
+    height: auto;
   }
 }

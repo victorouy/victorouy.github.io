@@ -128,7 +128,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const lastProject = document.getElementById("last-project");
 
   function checkScrollPosition() {
-    const maxScrollLeft = projectList.scrollWidth - projectList.clientWidth;
+    const maxScrollLeft =
+      projectList.scrollWidth - projectList.clientWidth + 20;
     const firstProjectMarginLeft = parseFloat(
       getComputedStyle(firstProject).paddingLeft
     );
@@ -136,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
       getComputedStyle(lastProject).paddingRight
     );
 
-    if (projectList.scrollLeft <= firstProjectMarginLeft) {
+    if (projectList.scrollLeft <= firstProjectMarginLeft - 20) {
       prevBtn.style.opacity = "0";
       prevBtn.style.pointerEvents = "none";
     } else {
