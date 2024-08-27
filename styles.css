@@ -404,10 +404,10 @@ a:hover {
   transition: font-size 0.2s;
   overflow: hidden;
   text-overflow: ellipsis; 
-  margin-left: 20px;
-  margin-right: 20px;
   padding-bottom: 4px;
   transition: transform 0.2s ease-in-out;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .event:hover {
@@ -429,18 +429,17 @@ a:hover {
 }
 
 /* ABOUT: SKILLS */
+.about-skill-details {
+  display: flex;
+  justify-content: space-between;
+}
 
 .skill-category {
-  width: 49.5%;
-  display: inline-block;
+  width: 33%;
 }
 
 .skill-header {
-  padding-right: 50px;
   padding-bottom: 15px;
-  height: 100%;
-  display: inline-block;
-  vertical-align: top; 
 }
 
 .skill-header h2 {
@@ -449,8 +448,7 @@ a:hover {
 }
 
 .skill-list {
-  width: 25%;
-  display: inline-block;
+  width: auto;
   vertical-align: top; 
 }
 

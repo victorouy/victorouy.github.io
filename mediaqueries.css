@@ -50,34 +50,12 @@
   }
   .content {
     font-size: 12px;
-  }
-  .skill-category {
-    width: 49%;
-    vertical-align: top; 
-  }
-  .skill-list {
-    display: inline;
+    margin-left: 8px;
+    margin-right: 8px;
   }
 }
 
-@media screen and (max-width: 700px) {
-  #profile {
-    padding-top: 13vh;
-    padding-bottom: 3vh;
-    height: auto;
-  }
-  .profile-description {
-    font-size: 19px;
-  }
-  .nav-links {
-    display: none;
-  }
-  #hamburger-nav {
-    display: flex;
-  }
-}
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
   .menu-links a {
     font-size: 16px;
     padding-bottom: 10px;
@@ -139,6 +117,9 @@
   .about-details {
     margin-left: 0%;
   }
+  .about-details-text {
+    font-size: 15px;
+  }
   .content {
     font-size: 10px;
   }
@@ -146,7 +127,42 @@
     width: 49%; /* Full width for smaller screens */
   }
   .skill-header h2, .skill-list p {
-    font-size: 16px; /* Adjust font size for smaller screens */
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #profile {
+    padding-top: 13vh;
+    padding-bottom: 3vh;
+    height: auto;
+  }
+  .profile-description {
+    font-size: 19px;
+  }
+  .nav-links {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+  }
+  .content {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .date {
+    font-size: 14px;
+    width: 50px;
+    padding-left: 18%;
+  }
+  .timeline::before {
+    top: 56.5px;
+  }
+  .timeline::after {
+    top: 52.5px;
   }
 }
 
@@ -157,6 +173,16 @@
   .content {
     margin-left: 2px;
     margin-right: 2px;
+  }
+  .date {
+    padding-left: 12%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .date {
+    width: auto;
+    padding-left: 0;
   }
 }
 

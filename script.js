@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   var i = 0;
   const txt =
-    "Montreal-based programmer creating innovative, user-centric digital solutions for dynamic and forward-thinking organizations.";
+    "Montreal-based programmer creating innovative, detailed-oriented and user-centric solutions for dynamic and forward-thinking organizations.";
   const speed = 30;
 
   function typeWriter() {
@@ -100,7 +100,7 @@ function onHandleClick(handle) {
   const slider = handle
     .closest(".project-slider")
     .querySelector(".project-list");
-  const scrollAmount = 500; // Number of pixels to scroll
+  const scrollAmount = 650; // Number of pixels to scroll
 
   if (handle.classList.contains("prev-btn")) {
     slider.scrollBy({
