@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   var i = 0;
   const txt =
-    "Montreal-based programmer creating innovative, detailed-oriented and user-centric solutions for dynamic and forward-thinking organizations.";
+    "Building applied AI systems, cloud-native platforms, and full-stack solutions — from RAG and NLP to CI/CD and infrastructure for dynamic and forward-thinking organizations.";
   const speed = 30;
 
   function typeWriter() {
